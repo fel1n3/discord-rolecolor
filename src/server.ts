@@ -1,5 +1,8 @@
+require('dotenv').config()
+
 import { Client, Message, Role, GuildMember} from 'discord.js'
 import { split, without, join } from 'lodash'
+
 const css3 = require('colornames')
 
 const cfg = {
