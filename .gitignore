@@ -73,3 +73,4 @@ typings/
 .serverless
 
 .bin
+tsconfig.json
