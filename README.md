@@ -12,6 +12,7 @@ CHANNEL_ID = 'ID of the channel that the command is used in'
 GUILD_ID = 'ID of the guild'
 ```
 Run the bot with ``npm start`` and you're good to go!
+
 ---
 ## Usage
 

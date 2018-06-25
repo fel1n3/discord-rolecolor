@@ -41,7 +41,8 @@ client.on('message', msg => {
     if(!role) {
         guild.createRole({
             name: color.name,
-            color: color.value
+            color: color.value,
+            position: 4
         }) 
         .then(role => {
             return giveColor(msg, role, guser);
