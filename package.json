@@ -1,0 +1,25 @@
+{
+  "name": "rolebot",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "prestart": "gulp",
+    "start": "node bin/server.js"
+  },
+  "author": "fel1n3",
+  "license": "GNU GPLv3",
+  "dependencies": {
+    "colornames": "^1.1.1",
+    "discord.js": "^11.3.2",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.5",
+    "@types/lodash": "^4.14.110",
+    "dotenv": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^5.0.0-alpha.2",
+    "typescript": "^2.9.2"
+  }
+}
