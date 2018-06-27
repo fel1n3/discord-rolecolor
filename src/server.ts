@@ -20,7 +20,7 @@ client.on('ready', () => {
 client.on('message', msg => {
     let cmd: string[] = split(msg.content, ' ')
 
-    if (cmd[0] != '!color' && cmd[0] != '!colour' ) return
+    if (cmd[0].toLowerCase() != '!color' && cmd[0].toLowerCase() != '!colour' ) return
     if (msg.channel.id != cfg.cmdid) return
 
     const colorn = join(without(cmd, cmd[0]), ' ');
@@ -31,10 +31,16 @@ client.on('message', msg => {
     let role = guild.roles.find('name', color.name)
     let guser = guild.members.find('id', msg.author.id)
 
+    
     guser.roles.array().forEach((val,i) => {
         if(!css3.get(val.name)) return
         //has a color
         guser.removeRole(val)
+            .then(() => {
+                if (val.members.array().length > 0) return
+                val.delete('Not being used')
+                    .catch(console.error)
+            })
             .catch(console.error)
     })
 
